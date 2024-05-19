@@ -103,7 +103,8 @@ function signUp() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'permissions-policy': 'compute-pressure=0.02, document-domain="https://inclu-acao-back.vercel.app", interest-cohort=()'
+          'permissions-policy': 'compute-pressure=0.02, document-domain="https://inclu-acao-back.vercel.app", interest-cohort=()',
+          'Access-Control-Allow-Origin': '*',
         },
         body: JSON.stringify(userData)
       })
