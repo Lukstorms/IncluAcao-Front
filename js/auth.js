@@ -102,7 +102,8 @@ function signUp() {
       fetch('https://inclu-acao-back.vercel.app/storeUserData', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'cors': 'no-cors'
         },
         body: JSON.stringify(userData)
       })
