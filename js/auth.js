@@ -114,7 +114,7 @@ function signUp() {
       })
       .then(data => {
         alert('User registered successfully');
-        window.location.href = 'dashboard.html';
+        window.location.href = 'https://inclu-acao-back.vercel.app/dashboard.html';
       })
       .catch(error => {
         console.error('Error in response:', error);
