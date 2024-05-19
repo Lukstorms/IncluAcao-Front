@@ -103,8 +103,6 @@ function signUp() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'permissions-policy': 'compute-pressure=0.02, document-domain="https://inclu-acao-back.vercel.app", interest-cohort=()',
-          'Access-Control-Allow-Origin': '*',
         },
         body: JSON.stringify(userData)
       })
@@ -116,7 +114,7 @@ function signUp() {
       })
       .then(data => {
         alert('User registered successfully');
-        window.location.href = 'dashboard.html';
+        window.location.href = 'https://inclu-acao-front.vercel.app/dashboard.html';
       })
       .catch(error => {
         console.error('Error in response:', error);
