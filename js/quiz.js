@@ -15,7 +15,7 @@ const auth = firebase.auth();
 window.logout = function() {
   auth.signOut().then(() => {
     alert('Logout successful');
-    window.location.href = 'https://inclu-acao-back.vercel.app/index.html';
+    window.location.href = 'index.html';
   }).catch((error) => {
     alert('Error: ' + error.message);
   });
