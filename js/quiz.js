@@ -67,6 +67,7 @@ window.submitQuiz = async function() {
           score: scorePercentage
         })
       });
+      
 
       const result = await response.json();
       console.log('Quiz status update result:', result);
