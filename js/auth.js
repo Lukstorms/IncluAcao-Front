@@ -10,27 +10,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
 const auth = firebase.auth();
-
-function toggleForm() {
-  document.getElementById('login-form').classList.toggle('hidden');
-  document.getElementById('signup-form').classList.toggle('hidden');
-}
-
-function login() {
-  const email = document.getElementById('login-email').value;
-  const password = document.getElementById('login-password').value;
-
-  auth.signInWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      alert('Login successful');
-      window.location.href = 'https://inclu-acao-front.vercel.app/dashboard.html';
-    })
-    .catch((error) => {
-      alert('Error: ' + error.message);
-    });
-}
 
 function signUp() {
   const nome = document.getElementById('signup-nome').value;
@@ -40,13 +20,13 @@ function signUp() {
   const telefone = document.getElementById('signup-telefone').value;
   const generonascimento = document.getElementById('signup-generonascimento').value;
   const generoident = document.getElementById('signup-generoident').value;
-  const transgenero = document.getElementById('signup-transgenero').value.toLowerCase() === "verdadeiro";
+  const transgenero = document.getElementById('signup-transgenero').value === "verdadeiro";
   const expressaogenero = document.getElementById('signup-expressaogenero').value;
   const orientacaosexual = document.getElementById('signup-orientacaosexual').value;
   const etnia = document.getElementById('signup-etnia').value;
-  const pcd = document.getElementById('signup-pcd').value.toLowerCase() === "verdadeiro";
+  const pcd = document.getElementById('signup-pcd').value === "verdadeiro";
   const qualpcd = document.getElementById('signup-qualpcd').value;
-  const cronico = document.getElementById('signup-cronico').value.toLowerCase() === "verdadeiro";
+  const cronico = document.getElementById('signup-cronico').value === "verdadeiro";
   const qualcronico = document.getElementById('signup-qualcronico').value;
   const religiao = document.getElementById('signup-religiao').value;
   const seconomica = document.getElementById('signup-seconomica').value;
@@ -56,10 +36,10 @@ function signUp() {
   const identicultura = document.getElementById('signup-identicultura').value;
   const nacionalidade = document.getElementById('signup-nacionalidade').value;
   const regiao = document.getElementById('signup-regiao').value;
-  const necessidadeesp = document.getElementById('signup-necessidadeesp').value.toLowerCase() === "verdadeiro";
+  const necessidadeesp = document.getElementById('signup-necessidadeesp').value === "verdadeiro";
   const qualnecessidadeesp = document.getElementById('signup-qualnecessidadeesp').value;
   const outros = document.getElementById('signup-outros').value;
-  const consent = document.getElementById('signup-consent').value.toLowerCase() === "verdadeiro";
+  const consent = document.getElementById('signup-consent').value === "verdadeiro";
 
   const userData = {
     uid: '',
@@ -91,8 +71,6 @@ function signUp() {
     consent
   };
 
-  console.log('Sending user data:', userData);
-
   auth.createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
       const user = userCredential.user;
@@ -102,7 +80,7 @@ function signUp() {
       fetch('https://inclu-acao-back.vercel.app/storeUserData', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(userData)
       })
@@ -114,7 +92,7 @@ function signUp() {
       })
       .then(data => {
         alert('User registered successfully');
-        window.location.href = 'https://inclu-acao-front.vercel.app/dashboard.html';
+        window.location.href = 'dashboard.html';
       })
       .catch(error => {
         console.error('Error in response:', error);
@@ -126,4 +104,3 @@ function signUp() {
       alert('Error: ' + error.message);
     });
 }
-
