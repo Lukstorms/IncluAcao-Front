@@ -25,7 +25,7 @@ function login() {
   auth.signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
       alert('Login successful');
-      window.location.href = 'https://inclu-acao-back.vercel.app/dashboard.html';
+      window.location.href = 'https://inclu-acao-front.vercel.app/dashboard.html';
     })
     .catch((error) => {
       alert('Error: ' + error.message);
