@@ -63,6 +63,9 @@ function createArticleElement(article) {
   const articleImage = document.createElement('img');
   articleImage.src = article.image;
   articleImage.alt = article.title;
+  articleImage.onerror = function() {
+    this.src = 'placeholder.png'; // Replace with the path to your default image
+  };
 
   const articleContent = document.createElement('div');
   articleContent.className = 'article-content';
