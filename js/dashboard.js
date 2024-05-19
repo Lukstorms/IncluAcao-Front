@@ -93,6 +93,10 @@ function createArticleElement(article) {
 // Function to display articles
 function displayArticles() {
   const articlesContainer = document.getElementById('articles');
+  if (!articlesContainer) {
+    console.error('Element with ID "articles" not found.');
+    return;
+  }
   articles.forEach(article => {
     const articleElement = createArticleElement(article);
     articlesContainer.appendChild(articleElement);
