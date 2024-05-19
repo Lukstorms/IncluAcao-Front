@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auth App</title>
+  <title>Login</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -13,43 +13,12 @@
       <input type="email" id="login-email" placeholder="Email" required>
       <input type="password" id="login-password" placeholder="Password" required>
       <button onclick="login()">Login</button>
-      <p>Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a></p>
-    </div>
-
-    <div id="signup-form" class="form hidden">
-      <h2>Sign Up</h2>
-      <input type="text" id="signup-nome" placeholder="Full Name" required>
-      <input type="email" id="signup-email" placeholder="Email" required>
-      <input type="password" id="signup-password" placeholder="Password" required>
-      <input type="date" id="signup-datanascimento" placeholder="Date of Birth">
-      <input type="text" id="signup-telefone" placeholder="Phone">
-      <input type="text" id="signup-generonascimento" placeholder="Gender at Birth">
-      <input type="text" id="signup-generoident" placeholder="Gender Identity">
-      <input type="text" id="signup-transgenero" placeholder="Transgender (true/false)">
-      <input type="text" id="signup-expressaogenero" placeholder="Gender Expression">
-      <input type="text" id="signup-orientacaosexual" placeholder="Sexual Orientation">
-      <input type="text" id="signup-etnia" placeholder="Ethnicity">
-      <input type="text" id="signup-pcd" placeholder="PCD (true/false)">
-      <input type="text" id="signup-qualpcd" placeholder="Which PCD">
-      <input type="text" id="signup-cronico" placeholder="Chronic Disease (true/false)">
-      <input type="text" id="signup-religiao" placeholder="Religion">
-      <input type="text" id="signup-seconomica" placeholder="Economic Situation">
-      <input type="number" id="signup-rendafmensal" placeholder="Monthly Family Income">
-      <input type="text" id="signup-escolaridade" placeholder="Education Level">
-      <input type="text" id="signup-idiomasfala" placeholder="Languages Spoken (comma separated)">
-      <input type="text" id="signup-identicultura" placeholder="Cultural Identity">
-      <input type="text" id="signup-nacionalidade" placeholder="Nationality">
-      <input type="text" id="signup-regiao" placeholder="Region">
-      <input type="text" id="signup-necessidadeesp" placeholder="Special Needs (true/false)">
-      <input type="text" id="signup-outros" placeholder="Others">
-      <input type="text" id="signup-consent" placeholder="Consent (true/false)" required>
-      <button onclick="signUp()">Sign Up</button>
-      <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+      <p>Não tem uma conta? <a href="signup.html">Sign Up</a></p>
     </div>
   </div>
   
-  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
-  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
-  <script type="module" src="js/auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="js/auth.js"></script>
 </body>
 </html>

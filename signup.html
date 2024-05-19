@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="signup-form" class="form">
+      <h2>Sign Up</h2>
+      <input type="text" id="signup-nome" placeholder="Nome completo" required>
+      <input type="email" id="signup-email" placeholder="Email" required>
+      <input type="password" id="signup-password" placeholder="Senha" required>
+      <input type="date" id="signup-datanascimento" placeholder="Data de nascimento">
+      <input type="text" id="signup-telefone" placeholder="Telefone">
+      <input type="text" id="signup-generonascimento" placeholder="Gênero atribuído ao nascimento">
+      <input type="text" id="signup-generoident" placeholder="Identidade de gênero">
+      <input type="text" id="signup-transgenero" placeholder="Transgênero? (verdadeiro/falso)">
+      <input type="text" id="signup-expressaogenero" placeholder="como você descreve sua expressão de gênero">
+      <input type="text" id="signup-orientacaosexual" placeholder="Orientação sexual">
+      <input type="text" id="signup-etnia" placeholder="Etnia">
+      <input type="text" id="signup-pcd" placeholder="PCD? (verdadeiro/falso)">
+      <input type="text" id="signup-qualpcd" placeholder="Qual deficiência">
+      <input type="text" id="signup-cronico" placeholder="Doença crônica (verdadeiro/falso)">
+      <input type="text" id="signup-qualcronico" placeholder="Qual doença crônica">
+      <input type="text" id="signup-religiao" placeholder="Religião">
+      <input type="text" id="signup-seconomica" placeholder="Situação economica">
+      <input type="number" id="signup-rendafmensal" placeholder="Renda familiar mensal">
+      <input type="text" id="signup-escolaridade" placeholder="Escolaridade">
+      <input type="text" id="signup-idiomasfala" placeholder="Línguas que fala (separadas por vírgula)">
+      <input type="text" id="signup-identicultura" placeholder="Identidade cultural">
+      <input type="text" id="signup-nacionalidade" placeholder="Nacionalidade">
+      <input type="text" id="signup-regiao" placeholder="Região">
+      <input type="text" id="signup-necessidadeesp" placeholder="Necessidades especiais (Verdadeiro/Falso)">
+      <input type="text" id="signup-qualnecessidadeesp" placeholder="Qual necessidade especial">
+      <input type="text" id="signup-outros" placeholder="Outros">
+      <input type="text" id="signup-consent" placeholder="Você consente em compartilhar essas informações para que possamos melhorar nossos serviços e promover a diversidade? (Verdadeiro/Falso)" required>
+      <button onclick="signUp()">Sign Up</button>
+      <p>Já tem uma conta? <a href="index.html">Login</a></p>
+    </div>
+  </div>
+  
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
