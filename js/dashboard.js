@@ -9,12 +9,13 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
 
 function logout() {
   auth.signOut().then(() => {
-    window.location.href = 'https://inclu-acao-front.vercel.app/index.html';
+    window.location.href = 'index.html';
   }).catch((error) => {
     console.error('Error logging out:', error);
   });
