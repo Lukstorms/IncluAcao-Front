@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aulas sobre diversidade</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <h1>Aulas sobre diversidade</h1>
+      <nav class="dashboard-nav">
+        <a href="#">About Us</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </nav>
+    </header>
+    <div class="dashboard-content">
+      <aside class="dashboard-sidebar">
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+        </ul>
+      </aside>
+      <main class="dashboard-main">
+        <h2>Watch these videos</h2>
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/DdVorjy6drc" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Xh47fdmCX4E" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="quiz-link">
+            <a href="quiz.html">Clique para verificar os seus conhecimentos</a>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

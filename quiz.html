@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <h1>Quiz</h1>
+      <nav class="dashboard-nav">
+        <a href="#">About Us</a>
+        <a href="#" onclick="logout()">Logout</a>
+      </nav>
+    </header>
+    <div class="dashboard-content">
+      <aside class="dashboard-sidebar">
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="aulas.html">Aulas sobre diversidade</a></li>
+        </ul>
+      </aside>
+      <main class="dashboard-main">
+        <h2>Quiz</h2>
+        <form id="quiz-form">
+          <div class="quiz-section">
+            <h3>Introdução</h3>
+            <div class="quiz-question">
+              <p>Pergunta 1) Quais termos são definidos no glossário LGBTQIAP+?</p>
+              <label><input type="radio" name="q1" value="A"> A) Identidade de gênero e expressão de gênero</label><br>
+              <label><input type="radio" name="q1" value="B"> B) Lésbica, gay, bissexual, transexual, queer, intersexual, assexual, pansexual e outros</label><br>
+              <label><input type="radio" name="q1" value="C"> C) Orientação sexual, atração afetiva e orientação romântica</label><br>
+              <label><input type="radio" name="q1" value="D"> D) Igualdade, não discriminação e pequenas ações cotidianas</label>
+            </div>
+            <!-- Add the rest of the questions similarly -->
+            <!-- Example for question 2 -->
+            <div class="quiz-question">
+              <p>Pergunta 2) A a que Fatores a identidade de gênero está associada?</p>
+              <label><input type="radio" name="q2" value="A"> A) Fatores biológicos</label><br>
+              <label><input type="radio" name="q2" value="B"> B) Fatores psicológicos</label><br>
+              <label><input type="radio" name="q2" value="C"> C) Fatores sociais, culturais e históricos</label><br>
+              <label><input type="radio" name="q2" value="D"> D) Fatores espirituais</label>
+            </div>
+            <!-- Repeat for other questions -->
+          </div>
+          <!-- Repeat for other sections like "Normas de convivência" and "Legislação brasileira" -->
+          <button type="button" onclick="submitQuiz()">Submit</button>
+        </form>
+        <div id="quiz-result"></div>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+  <script type="module" src="js/dashboard.js"></script>
+  <script type="module" src="js/quiz.js"></script>
+</body>
+</html>
