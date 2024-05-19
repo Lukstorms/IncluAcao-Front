@@ -18,7 +18,7 @@ const auth = getAuth(app);
 window.logout = function() {
   signOut(auth).then(() => {
     alert('Logout successful');
-    window.location.href = 'index.html';
+    window.location.href = 'https://inclu-acao-front.vercel.app/index.html';
   }).catch((error) => {
     alert('Error: ' + error.message);
   });

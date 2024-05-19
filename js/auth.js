@@ -99,7 +99,7 @@ function signUp() {
       userData.uid = user.uid;  // Add uid to userData
 
       // Send additional user data to server
-      fetch('http://localhost:5000/storeUserData', {
+      fetch('https://inclu-acao-back.vercel.app/storeUserData', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

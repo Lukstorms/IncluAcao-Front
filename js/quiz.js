@@ -60,7 +60,7 @@ window.submitQuiz = async function() {
   const user = auth.currentUser;
   if (user) {
     try {
-      const response = await fetch('http://localhost:5000/updateQuizStatus', {
+      const response = await fetch('https://inclu-acao-back.vercel.app/updateQuizStatus', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
