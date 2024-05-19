@@ -8,10 +8,10 @@ const firebaseConfig = {
   appId: "1:198502388108:web:bd387b9504810af7d586a9"
 };
 
-// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
+// Sign up function
 function signUp() {
   const nome = document.getElementById('signup-nome').value;
   const email = document.getElementById('signup-email').value;
@@ -104,3 +104,33 @@ function signUp() {
       alert('Error: ' + error.message);
     });
 }
+
+// Login function
+function login() {
+  const email = document.getElementById('login-email').value;
+  const password = document.getElementById('login-password').value;
+
+  auth.signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      alert('Login successful');
+      window.location.href = 'dashboard.html';
+    })
+    .catch((error) => {
+      alert('Error: ' + error.message);
+    });
+}
+
+// Logout function
+function logout() {
+  auth.signOut().then(() => {
+    alert('Logout successful');
+    window.location.href = 'index.html';
+  }).catch((error) => {
+    alert('Error: ' + error.message);
+  });
+}
+
+// Make functions available globally
+window.signUp = signUp;
+window.login = login;
+window.logout = logout;
