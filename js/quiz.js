@@ -1,6 +1,3 @@
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
-import { getAuth, signOut } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
-
 // Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDfSd3zbl4iOT_Dw3RA0nk4HVo1SrUcCsc",
@@ -12,13 +9,13 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
 
 window.logout = function() {
-  signOut(auth).then(() => {
+  auth.signOut().then(() => {
     alert('Logout successful');
-    window.location.href = 'https://inclu-acao-front.vercel.app/index.html';
+    window.location.href = 'index.html';
   }).catch((error) => {
     alert('Error: ' + error.message);
   });
