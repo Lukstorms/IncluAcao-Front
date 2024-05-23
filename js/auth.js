@@ -41,6 +41,11 @@ function signUp() {
   const qualnecessidadeesp = document.getElementById('signup-qualnecessidadeesp').value;
   const outros = document.getElementById('signup-outros').value;
   const consent = document.getElementById('signup-consent').value === "verdadeiro";
+  
+  if (!email.endsWith('@pessoaepessoa.com.br')) {
+    alert('Email inválido. Por favor se cadastre com um email do domínio @pessoaepessoa.com.br');
+    return;
+  }
 
   const userData = {
     uid: '',
