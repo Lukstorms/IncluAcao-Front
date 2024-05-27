@@ -1,5 +1,5 @@
 // firebaseConfig.mjs
-import firebase from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
 import { getAuth } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
 
 // Firebase configuration
@@ -13,7 +13,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const auth = getAuth();
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 export { auth };

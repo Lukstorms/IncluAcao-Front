@@ -1,5 +1,6 @@
 // auth.js
 import { auth } from './firebaseConfig.mjs';
+import { signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
 
 async function signUp() {
   const userData = {
@@ -63,13 +64,14 @@ async function login() {
   const password = document.getElementById('login-password').value;
 
   try {
-    await auth.signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(auth, email, password);
     alert('Login successful');
     window.location.href = 'dashboard.html';
   } catch (error) {
     alert('Error: ' + error.message);
   }
 }
+
 
 async function logout() {
   try {
