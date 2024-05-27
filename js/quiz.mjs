@@ -1,5 +1,5 @@
 // quiz.js
-import { auth } from './firebaseConfig.js';
+import { auth } from './firebaseConfig.mjs';
 
 async function submitQuiz() {
   const quizForm = document.getElementById('quiz-form');

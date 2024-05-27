@@ -1,7 +1,6 @@
-// firebaseConfig.js
-// Import the Firebase library
-import firebase from 'firebase/app';
-import 'firebase/auth';
+// firebaseConfig.mjs
+import firebase from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
+import { getAuth } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -15,6 +14,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
+const auth = getAuth();
 
-export { auth, firebase };
+export { auth };
