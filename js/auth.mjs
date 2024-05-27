@@ -1,6 +1,6 @@
-// auth.js
+// auth.mjs
 import { auth } from './firebaseConfig.mjs';
-import { signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
 
 async function signUp() {
   const userData = {
@@ -39,7 +39,7 @@ async function signUp() {
   }
 
   try {
-    const userCredential = await auth.createUserWithEmailAndPassword(userData.email, userData.password);
+    const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password);
     const user = userCredential.user;
     userData.uid = user.uid;
 
@@ -71,7 +71,6 @@ async function login() {
     alert('Error: ' + error.message);
   }
 }
-
 
 async function logout() {
   try {
