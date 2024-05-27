@@ -1,5 +1,5 @@
 // dashboard.js
-import { auth } from './js/firebaseConfig.js';
+import { auth } from './firebaseConfig.js';
 
 async function logout() {
   try {

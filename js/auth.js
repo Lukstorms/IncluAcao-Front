@@ -1,5 +1,5 @@
 // auth.js
-import { auth } from './js/firebaseConfig.js';
+import { auth } from './firebaseConfig.js';
 
 async function signUp() {
   const userData = {
