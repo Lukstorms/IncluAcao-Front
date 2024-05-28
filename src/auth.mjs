@@ -1,6 +1,6 @@
 // auth.mjs
 import { auth } from './firebaseConfig.mjs';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 
 async function signUp() {
   const userData = {
@@ -82,6 +82,6 @@ async function logout() {
   }
 }
 
+// Export functions to the global scope
 window.signUp = signUp;
 window.login = login;
-window.logout = logout;
